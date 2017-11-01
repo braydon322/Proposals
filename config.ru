@@ -8,3 +8,6 @@ use Rack::MethodOverride
 use ProposalController
 use UserController
 run ApplicationController
+
+require './app'
+run Sinatra::Application
