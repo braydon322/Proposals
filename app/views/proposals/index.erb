@@ -1,0 +1,9 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <% @proposals.all.each do |proposal| %>
+    <a href="/proposals/<%= proposal.id %>"><%= proposal.project_type %> - <%= proposal.client_company %> - <%= proposal.budget %></a><br>
+    <% end %>
+  </body>
+</html

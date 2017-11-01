@@ -1,0 +1,247 @@
+<head>
+<link href="https://fonts.googleapis.com/css?family=Biryani:800|Lato:700|Montserrat+Subrayada:700|Quicksand:700|Roboto:300" rel="stylesheet">
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
+<link href="/css/jquery.signature.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+  <style>
+  body {
+    background-color: black;
+  }
+
+  .kbw-signature {
+    width: 400px;
+    height: 200px;
+  }
+
+  @font-face{
+    font-family: "BebasNeue";
+    src: url("/font/bebas.otf");
+    }
+
+  @font-face{
+    font-family: "BebasNeueBold";
+    src: url("/font/bebasbold.otf");
+    }
+
+  .sections {
+    padding-top: 2%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    height: 20vh;
+  }
+
+  .col-left {
+    width:30%;
+    padding: 20px;
+    float: left;
+    display: flex;
+    top: 50%;
+  }
+
+  .smaller-col-left {
+    width: 40%;
+    float: left;
+  }
+  .smaller-col-right {
+    width: 40%;
+    float: right;
+  }
+
+  .signature {
+    height: 20vh;
+  }
+
+  .col-right {
+    width:60%;
+    padding: 20px;
+    float: right;
+    text-align: right;
+  }
+
+  .terms {
+    height: 20vh;
+  }
+
+  .container {
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px;
+  }
+
+  .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 100%;
+}
+
+.submit {
+  padding-bottom: 1%;
+  height: 100%;
+}
+
+  #my-signature {
+    font-size: 30px;
+    font-family: 'Dancing Script', cursive;
+  }
+
+  #header-image {
+    background-image: url("/img/01.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: grey;
+    padding: 5%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    height: flex;
+    text-shadow: 2px 2px black;
+  }
+
+  .content {
+    padding: 5%;
+  }
+
+  h1 {
+    font-size: 5em;
+    font-family: 'Biryani', sans-serif;
+    line-height:2px;
+  }
+
+  h2 {
+    margin-top: 1%;
+    font-family: 'Arial', sans-serif;
+    line-height: 0;
+    font-size: 2em;
+    letter-spacing:-1px;
+  }
+
+  h3 {
+    font-size:1.75em;
+  }
+
+  h6 {
+    font-size: 1em;
+  }
+
+  p {
+    margin-top: -1%;
+    font-family: 'Roboto', sans-serif;
+
+  }
+  </style>
+  </script>
+</head>
+<body>
+<div class ="container">
+  <div id="header-image">
+      <h1><%= @proposal.project_name %></h1>
+      <h3> Prepared for <em><b><%= @proposal.client_name %></b></em> of <%= @proposal.client_company %></h3>
+      <h6> by Braydon Whitmarsh - me@braydonwhitmarsh.com</h6>
+  </div>
+
+  <div class="sections">
+    <div class ="col-left">
+    <h2>Overview</h2>
+    </div>
+    <div class ="col-right">
+      <p><%=  @proposal.overview %></p>
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class ="col-left">
+      <h2>Why Me</h2>
+    </div>
+    <div class ="col-right">
+      <p>Your project and my skills are a great fit. Here’s why:
+        <br><br>I respect your deadlines.
+        <br>My goal is to get you the highest-quality work as quickly as possible.
+        <br>Every pixel counts, and I’m here to make sure they all look perfect.
+        <br>Once the deadline is settled, the deadline is settled. I’m always on time.</p>
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class ="col-left">
+    <h2>Fees</h2>
+    </div>
+    <div class ="col-right">
+      <p>Here's a breakdown of the deliverables we've discussed and their cost:
+          <br><%= @proposal.fee_1 %>
+          <br><%= @proposal.fee_2 %>
+          <br><%= @proposal.fee_3 %>
+      </p>
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class ="col-left">
+      <h2>Milestones</h2>
+    </div>
+    <div class ="col-right">
+      <p>Assuming that we have all necessary materials ready, here are the suggested milestones:
+          <br><%= @proposal.milestone_1%>
+          <br><%= @proposal.milestone_2%>
+          <br><%= @proposal.milestone_3%>
+      </p>
+    </div>
+  </div>
+
+  <div class="sections">
+    <div class ="col-left">
+    <h2>What's Next?</h2>
+    </div>
+    <div class ="col-right">
+      <p>I will be happy to answer any question regarding this proposal. You can reach me at my phone <em> <a href="tel:408-601-8840">408-601-8840</em></a> or at my email - <a href="mailto:me@braydonwhitmarsh.com"><em>me@braydonwhitmarsh.com</em></a>
+      <br><br>Once you approve this proposal, we will set up a meeting to further discuss details, dates and milestones.
+      <br><br><b><em>Only after receiving payment, as well as all needed resources,
+      <br>will the actual work begin.</b></em></p>
+    </div>
+  </div>
+
+  <div class="sections terms">
+    <div class ="col-left">
+    <h2>Terms</h2>
+    </div>
+    <div class ="col-right">
+      <p>Payment structure: <b><em>100% upfront, all payment completed before work.</em></b>
+      <br><br>Payments must be completed before the 3rd day of the month for retainer projects.
+      <br><br>Payment via Paypal, or bank transfer - unless otherwise discussed.
+      <br>
+      <br>Additional work for components that appear in the scope of work will
+      <br>be charged $45 per hour (e.g. beyond the number of revisions described).
+
+    </div>
+  </div>
+
+  <div class="sections signature">
+    <div class ="col-left">
+    <h2>Signature</h2>
+    </div>
+    <div class ="col-right">
+      <div class="smaller-col-left">
+        <p>Braydon Whitmarsh</p>
+        <p id="my-signature">Braydon Whitmarsh</p><br>
+        <p><%= @proposal.time_created %></p>
+      </div>
+      <div class="smaller-col-right">
+        <p><%= @proposal.client_name %></p>
+        <% if @proposal.time_created %>
+          <p id="my-signature"><%= @proposal.client_name %></p><br>
+          <% end %>
+        <p><%= @proposal.time_signed %></p>
+      </div>
+
+    </div>
+    <a href="http://pdf-ace.com/pdfme/" target="_blank">Save as PDF</a>
+  </div>
+</div>
+</body>
